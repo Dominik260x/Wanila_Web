@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  #wrapper {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    background-color: white;
+  }
+  
+  body {
+    background-color: steelblue;
+  }
+
+  section,footer {
+    background-color: white;
+    padding: 10px 10px;
+  }
+
+  header img {
+    width: 100%;
+    display: block;
+    height: 50%;
+    padding-top: 5px;
+    background-color: steelblue;
+  }
+
+  header img {
+    width: 100%;
+    display: block;
+    height: 50%;
+  }
+  
+  nav {
+    background-color: darkslategray;
+  }
+  
+  a.menu {
+    display: inline-block;
+    width: 33%;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  a.menu:hover {
+    font-size: 20px;
+    background-color: maroon;
+  }
+  
+  img:hover {
+    border-bottom: 10px solid darkorange;
+  }
+  
+  .active {
+    background-color: maroon;
+  }
+  
+  article {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 10% 20px 10%;
+    padding-bottom: 15px;
+    border-bottom: 2px solid crimson;
+  }
+  
+  img.left {
+    float: left;
+    padding: 0px 10px 10px 0;
+    width: 35%;
+    border-radius: 10%;
+    border: 1px solid blue;
+  }
+  
+  article p {
+    text-align: justify;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 15px 0;
+  }
+  
+  iframe {
+    width: 100%;
+  }
+  
+  footer {
+    height: 40px;
+    background-color: darkcyan;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  

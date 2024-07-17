@@ -1,0 +1,7 @@
+{
+    "name": "Esther",
+    "age": "47", 
+    "isEmployed": true,
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "hobbies": ["Fishing", "karate"]
+}

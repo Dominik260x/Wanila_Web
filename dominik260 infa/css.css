@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(39, 38, 38);
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header-div {
+    margin-top: 2rem;
+}
+
+.header-div-headline {
+    font-size: 3rem;
+    text-align: center;
+    background-color: rgb(173, 173, 172);
+    border-radius: 46px 46px 0px 0px;
+}
+
+
+.header-div-bookmarks {
+    padding: 1rem;
+    width: 73rem;
+    background-color: rgb(81, 77, 77);
+}
+
+.header-div-bookmarks-a {
+    float: left;
+    font-size: 2.5rem;
+    min-width: 3rem;
+    padding: 0.8rem;
+    border-right: 0.1rem dotted bisque;
+    height: 3rem;
+}
+
+.header-div-bookmarks-a-end {
+    float: left;
+    font-size: 2.5rem;
+    min-width: 3rem;
+    padding: 0.8rem;
+    height: 3rem;
+}
+
+.section-div-nav {
+    font-size: 2rem;
+    background-color: rgb(108, 109, 110);
+    float: left;
+    text-align: center;
+    padding: 1rem;
+    width: 10rem;
+    min-height: 35rem;
+
+}
+
+.section-article {
+    font-size: 1.8rem;
+    background-color: rgb(179, 181, 184);
+    float: left;
+    text-align: justify;
+    padding: 2rem;
+    width: 59rem;
+    min-height: 33rem;
+}
+
+
+
+#footer {
+    font-size: 1.73rem;
+    padding: 1.5rem;
+    background-color: rgb(173, 173, 172);
+    border-radius: 10px 10px 46px 46px;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}

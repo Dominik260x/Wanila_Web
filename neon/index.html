@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.89.css" />
+    <link href="favicon (1).ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>neon</title>
+  </head>
+  <body>
+    <button>Włącz</button>
+    <ul>
+      <li>D</li>
+      <li>O</li>
+      <li>M</li>
+      <li>I</li>
+      <li>N</li>
+      <li>I</li>
+      <li>K</li>
+      <br />
+      <li>K</li>
+      <li>O</li>
+      <li>M</li>
+      <li>O</li>
+      <li>R</li>
+      <li>O</li>
+      <li>W</li>
+      <li>S</li>
+      <li>K</li>
+      <li>I</li>
+      <br />
+      <li>M</li>
+      <li>O</li>
+      <li>J</li>
+      <li>E</li>
+      <br />
+      <li><a href="https://sage-pie-b1d2e2.netlify.app">STRONY. </a></li>
+    </ul>
+
+    <script>
+      var button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        if (this.textContent == "Włącz") {
+          this.textContent = "Wyłącz";
+        } else {
+          this.textContent = "Włącz";
+        }
+        const letters = document.querySelectorAll("li");
+        for (var i = 0; letters.length > i; i++) {
+          letters[i].classList.toggle("off");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animacja</title>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      div {
+        height: 100vh;
+        background: url(animation/sedan.png) no-repeat,
+          url(animation/car.png) no-repeat,
+          url(animation/sport-car.png) no-repeat,
+          url(animation/motorbike.png) no-repeat,
+          url(animation/baby-car.png) no-repeat,
+          url(animation/big-truck.png) no-repeat,
+          url(animation/asfaltowa.jpg) repeat;
+
+        background-size: auto 15%, auto 15%, auto 15%, auto 10%, auto 14%,
+          auto 18%;
+
+        background-position: top 17% left 5%, top 35% left 5%, top 51% left 5%,
+          top 28% left -168%, top 70% left 5%, top 88% left 5%, top 0% left 0%;
+
+        transition: background-position 5s ease;
+      }
+
+      div:hover {
+        background-position: top 17% left 77%, top 35% left 75%,
+          top 51% left 85%, top 28% left 300%, top 70% left 60%,
+          top 88% left 55%, top 0% left 20000%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+  </body>
+</html>

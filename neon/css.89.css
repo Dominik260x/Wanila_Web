@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+}
+
+li {
+  color: yellow;
+  display: inline-block;
+  font-size: 40px;
+  font-family: Monda;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px white, 0 0 10px yellow;
+}
+
+button {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  background-color: black;
+}
+
+ul {
+  margin: auto;
+}
+
+li:nth-child(3) {
+  transform: rotate(-15deg) translate(4px);
+  animation: neon 2s infinite linear;
+}
+
+li:nth-child(11) {
+  transform: rotate(-15deg) translate(4px);
+  animation: neon 2s infinite linear;
+}
+
+li:nth-child(22) {
+  transform: rotate(-15deg) translate(4px);
+  animation: neon 2s infinite linear;
+}
+
+@keyframes neon {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0, 5;
+  }
+  26% {
+    opacity: 0;
+  }
+  56% {
+    opacity: 1;
+  }
+  83% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.off {
+  opacity: 0;
+}

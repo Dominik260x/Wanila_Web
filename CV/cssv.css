@@ -1,0 +1,99 @@
+body {
+  font-family: Arial;
+  background-color: aliceblue;
+  padding: 40px 0;
+  margin: 0 auto 0 auto;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+section,
+header {
+  padding: 10px 60px 20px 60px;
+  width: 960px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+span {
+  color: green;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+header ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+.address-icon {
+  width: 16px;
+  height: 16px;
+  background-color: cornflowerblue;
+  margin-right: 10px;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.małpa {
+  border-top: 2px;
+  border-left: 2px;
+  width: 0 40px 0 40px;
+}
+
+.hobi {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hobi li {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.profil {
+  width: 180px;
+  height: 180px;
+}
+
+.hobi div {
+  margin-left: 20px;
+}
+
+.hobi p {
+  color: gray;
+}
+
+p {
+  line-height: 1, 5;
+}

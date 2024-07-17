@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="images/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="sass.css" />
+    <link rel="stylesheet" href="sass.sass" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2? family=Lato&display=swap"
+      rel="arkusz stylów"
+    />
+    <title>Profil Informatyczny w Staszicu</title>
+  </head>
+
+  <body>
+    <main>
+      <nav class="light">
+        <img
+          id="logo"
+          src="images/logo.png"
+          alt="Logo szkoły im.Stanisława Staszic w Nakle nad Notecią"
+        />
+        <ul id="bookmarks" class="light">
+          <li>
+            <a
+              class="light"
+              class="bookmarks-element"
+              id="bookmarks-element-1"
+              href="index.html"
+              >O Szkole</a
+            >
+          </li>
+          <li>
+            <a
+              class="light"
+              class="bookmarks-element"
+              id="bookmarks-element-2"
+              href="O Profilu.html"
+              >O Profilu</a
+            >
+          </li>
+          <li>
+            <a
+              class="light"
+              class="bookmarks-element"
+              id="bookmarks-element-3"
+              href="Nauczyciele.html"
+              >Nauczycie</a
+            >
+          </li>
+          <li>
+            <a
+              class="light"
+              class="bookmarks-element"
+              id="bookmarks-element-4"
+              href="Rekrutacja.html"
+              >Rekrutacja</a
+            >
+          </li>
+        </ul>
+        <button id="burger">
+          <div class="line light" id="line-1"></div>
+          <div class="line light" id="line-2"></div>
+          <div class="line light" id="line-3"></div>
+        </button>
+        <button id="change-mode" class="light">
+          <div id="change-mode-dot" class="light"></div>
+        </button>
+      </nav>
+
+      <header class="light">
+        <div id="slider">
+          <img
+            class="arrow"
+            onclick="prevSlide()"
+            id="arrow-1"
+            alt="left arrow"
+          />
+          <div id="slides">
+            <div class="slide-container">
+              <div class="slide light" id="slide-1">
+                <div id="slide-1-images">
+                  <div id="slide-1-images-aside">
+                    <img
+                      src="images/dronka2.jpg"
+                      alt=""
+                      id="slide-1-images-2"
+                    />
+                    <img
+                      src="images/dronka3.jpg"
+                      alt=""
+                      id="slide-1-images-3"
+                    />
+                  </div>
+                </div>
+                <div id="slide-1-article">
+                  <h2>
+                    <b>Mikołaj Stasiak</b> <br />
+                    Stworzył on grę komputerową<br />
+                    (biedronkę) w programie Unity.
+                    <br />
+                    Gra składa się z 9 poziomów, na których podejmujemy
+                    różnorodne wyzwania, by w końcowym etapie zmierzyć się z
+                    bossem (ogromną pszczołą), którą trzeba zniszczyć
+                    wykorzystując inne pszczoły. Gra zawiera menu, umożliwiające
+                    między innymi zmianę: koloru naszej biedronki, poziomu
+                    głośności muzyki, oraz innych opcji.
+                    <br />
+                    Link do gry:
+                    <a href="https://dronek.itch.io/biedronka-2">
+                      https://dronek.itch.io/biedronka-2
+                    </a>
+                  <h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-container">
+              <div class="slide light" id="slide-2">
+                <div id="slide-2-images">
+                  <div id="slide-2-images-aside">
+                    <img
+                      src="images/MojeLiceum3.jpg"
+                      alt=""
+                      id="slide-2-images-3"
+                    />
+                    <img
+                      src="images/MojeLiceum2.jpg"
+                      alt=""
+                      id="slide-2-images-2"
+                    />
+                  </div>
+                </div>
+                <div id="slide-2-article">
+                  <h2>
+                    <b>Projekt Moje Liceum II</b> <br />
+                    Wkrótce ruszy rekrutacja uczniów na płatne staże Od 8 do 19
+                    kwietnia 2024 r. będziemy prowadzić nabór na płatne staże w
+                    ramach projektu "Moje liceum II". Uczniowie będą mogli odbyć
+                    staż w wybranej firmie lub instytucji na terenie powiatu
+                    nakielskiego, bydgoskiego i Miasta Bydgoszczy w okresie
+                    wakacji. Oprócz wynagrodzenia przewidziano zwrot kosztów
+                    dojazdu, ubezpieczenie, badanie lekarskie oraz materiały
+                    niezbędne do odbycia stażu.
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide-container">
+              <div class="slide light" id="slide-3">
+                <div id="slide-3-images">
+                  <img
+                    src="images/drzwiOtwarte.jpg"
+                    alt=""
+                    id="slide-3-images-1"
+                  />
+                </div>
+                <div id="slide-3-article">
+                  <h2>
+                    Staszic zaprasza na Drzwi Otwarte!
+                    Kończysz szkołę podstawową i
+                    zastanawiasz się nad wyborem 
+                    szkoły średniej? Nie ma na co 
+                    czekać!!! Ósmoklasiści i ich 
+                    szacowni Rodzice!!! Zapraszamy 
+                    na Drzwi Otwarte w Zespole Szkół 
+                    im. Stanisława Staszica w Nakle 
+                    nad Notecią!
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            class="arrow"
+            onclick="nextSlide()"
+            id="arrow-2"
+            alt="right arrow"
+          />
+        </div>
+      </header>
+
+      <section class="light">
+        <div id="video-container">
+          <iframe
+            id="video"
+            src="https://www.youtube.com/embed/xe2NAof7mEc?si=lu6kQWExmv-Q9led"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <article>
+          <div id="heading">
+            <h1>O Nauczycielach</h1>
+          </div>
+          <div id="description">
+            <h2>
+              Nauczyciele profilu informatycznego w Technikum im. Stanisława
+              Staszica w Nakle nad Notecią to zespół wykwalifikowanych i
+              doświadczonych nauczycieli, którzy są pasjonatami swojej
+              dziedziny. Każdy z nich posiada solidne wykształcenie i
+              doświadczenie w branży IT, co pozwala im przekazywać uczniom
+              najnowszą wiedzę i umiejętności.
+              <br> <br>
+              Nasi nauczyciele są zaangażowani
+              w ciągły rozwój swoich umiejętności, regularnie uczestnicząc w
+              szkoleniach i warsztatach branżowych. Dzięki temu są na bieżąco z
+              najnowszymi trendami i technologiami w branży IT, które następnie
+              wprowadzają do programu nauczania.
+              <br> <br>
+              Ale co najważniejsze, nasi
+              nauczyciele są prawdziwymi mentorami dla naszych uczniów. Dążą do
+              stworzenia środowiska, które promuje ciekawość, kreatywność i
+              dążenie do doskonałości. Są dostępni, aby pomóc uczniom zrozumieć
+              trudne koncepcje, rozwijać umiejętności problem-solving i odkrywać
+              swoje pasje.
+            </h2>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <div id="footer-container">
+          <a href="#">
+            <div class="icon" id="Facebook">
+              <img src="images/facebook.png" alt="Ikona Facebooka" />
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon" id="YouTube">
+              <img src="images/youtube.png" alt="Ikona YouTuba" />
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon" id="TikTok">
+              <img src="images/tik-tok.png" alt="Ikona TikTok" />
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon" id="Instagram">
+              <img src="images/instagram.png" alt="Ikona Instagram" />
+            </div>
+          </a>
+          <div style="clear: both"></div>
+        </div>
+      </footer>
+      <script src="burger.js"></script>
+      <script src="slider.js"></script>
+      <script src="changeModeTheme.js"></script>
+    </main>
+  </body>
+</html>

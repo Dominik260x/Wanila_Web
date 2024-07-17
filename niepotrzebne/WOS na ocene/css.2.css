@@ -1,0 +1,78 @@
+body {
+    font-family: Arial;
+    background-color: aliceblue;
+    padding: 40px 0;
+    margin: 0 auto 0 auto;
+}
+
+h2{
+    font-size: 28px;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+section,
+header{
+    padding: 10px 60px 5px 60px;
+    width: 960px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.Ważne {
+    color: red;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.odstemp {
+    margin-top: 1px;
+}
+
+.doulmargin {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+h5 {
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

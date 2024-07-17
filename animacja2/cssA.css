@@ -1,0 +1,63 @@
+.circle {
+  width: 40vh;
+  height: 40vh;
+  background-color: white;
+  border-radius: 50%;
+  border-bottom: 120px solid red;
+  border-left: 120px solid orange;
+  border-right: 120px solid blue;
+  border-top: 120px solid green;
+  margin: 0 auto;
+  transition: all 10s ease, border 3s ease-in-out, background-color 10s ease;
+}
+
+.active {
+  transform: rotate(21370deg);
+  border-bottom-color: yellow;
+  border-left-color: darkgreen;
+  border-right-color: cadetblue;
+  border-top-color: crimson;
+  background-color: black;
+}
+
+button {
+  background-color: brown;
+  color: white;
+  display: block;
+  margin: 20px auto;
+  border: none;
+  font-size: 65px;
+  border-radius: 15%;
+  border: solid 3px black;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+@media (orientation: portrait) {
+  button {
+    background-color: brown;
+    color: white;
+    display: block;
+    margin: 20px auto;
+    border: none;
+    font-size: 55px;
+    border-radius: 15%;
+    border: solid 3px black;
+  }
+
+  .circle {
+    width: 20vh;
+    height: 20vh;
+    background-color: white;
+    border-radius: 50%;
+    border-bottom: 115px solid red;
+    border-left: 115px solid orange;
+    border-right: 115px solid blue;
+    border-top: 115px solid green;
+    margin: 0 auto;
+    transition: all 10s ease, border 3s ease-in-out, background-color 10s ease;
+  }
+
+}

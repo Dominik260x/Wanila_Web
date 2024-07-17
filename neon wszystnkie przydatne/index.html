@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <link href="favicon (1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>Moje strony</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <button>WŁĄCZ</button>
+    <ul>
+      <li>1</li>
+      <li>
+        <a href="https://www.toptal.com/designers/subtlepatterns/">Tła</a>
+      </li>
+      <br />
+      <li>2</li>
+      <li>
+        <a href="https://fontawesome.com/">Icon</a>
+      </li>
+      <br />
+      <li>3</li>
+      <li><a href="https://pl.lipsum.com/">lorem</a></li>
+      <br />
+      <li>4</li>
+      <li><a href="https://fonts.google.com/">Fonty</a></li>
+      <br />
+      <li>5</li>
+      <li><a href="https://favicon.io/favicon-generator/">Favicon1</a></li>
+      <br />
+      <li>6</li>
+      <li><a href="https://www.favicon.cc/">Favicon2</a></li>
+      <br />
+      <li>7</li>
+      <li><a href="https://cssgenerator.org/">CSS gen. tool</a></li>
+      <br>
+      <li>8</li>
+      <li><a href="https://webcode.tools/css-generator/background-color">Gen. wszystkiego</a></li>
+      <br>
+      <li>9</li>
+      <li><a href="https://www.deepl.com/pl/translator">Tłumacz</a></li>
+    </ul>
+
+    <script>
+      var button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        if (this.textContent == "Włącz") {
+          this.textContent = "Wyłącz";
+        } else {
+          this.textContent = "Włącz";
+        }
+        const letters = document.querySelectorAll("li");
+        for (var i = 0; letters.length > i; i++) {
+          letters[i].classList.toggle("off");
+        }
+      });
+    </script>
+  </body>
+</html>

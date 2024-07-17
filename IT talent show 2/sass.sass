@@ -1,0 +1,625 @@
+$light-nav-background-color: hsl(212.1, 100%, 13.9%)
+$light-nav-bookmark-element-a-color: hsl(0, 0%, 100%)
+$light-nav-line-background-color: hsl(0, 0%, 50%)
+$light-nav-burger-ul-background-color: hsl(60, 0%, 100%)
+$light-nav-burger-a-color: hsl(0, 100%, 0%)
+$light-header-background-color: hsl(0, 0%, 100%)
+$light-header-slide-background-color: hsl(0, 1%, 30%)
+$light-header-arrow-container-background-color: hsl(0, 100%, 100%)
+$light-section-background-color: hsl(0, 0%, 90%)
+$light-section-article-color: hsl(0, 0%, 90%)
+$light-footer-background-color: hsl(212.1, 100%, 13.9%)
+$light-border-bottom: hsl(0, 0%, 0%)
+
+$light-change-mode-background-color: hsl(0, 0%, 85%)
+$light-change-mode-dot-background-color: hsl(0, 3%, 30%)
+$dark-change-mode-background-color: hsl(0, 0%, 15%)
+$dark-change-mode-dot-background-color: hsl(0, 3%, 70%)
+
+$dark-nav-background-color: hsl(212.1, 100%, 13.9%)
+$dark-nav-bookmark-element-a-color: hsl(0, 0%, 100%)
+$dark-nav-change-mode-background-color: hsl(0, 0%, 5%)
+$dark-nav-line-background-color: hsl(0, 0%, 80%)
+$dark-nav-burger-ul-background-color: hsl(60, 0%, 5%)
+$dark-nav-burger-a-color: hsl(0, 0%, 100%)
+$dark-change-mode-dot-background-color: hsl(0, 3%, 30%)
+$dark-header-background-color: hsl(0, 0%, 5%)
+$dark-header-slide-background-color: hsl(0, 1%, 30%)
+$dark-header-arrow-container-background-color: hsl(0, 0%, 100%)
+$dark-section-background-color: hsl(0, 0%, 5%)
+$dark-section-article-color: hsl(0, 100%, 100%)
+$dark-footer-background-color: hsl(212.1, 100%, 13.9%)
+$dark-border-bottom: hsl(0, 0%, 100%)
+/*Global Settings
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    overflow-x: hidden
+    font-family: "Lato", sans-serif
+
+body
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    margin-top: auto
+    margin-bottom: auto
+    overflow: hidden
+
+nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0.5rem
+    position: relative
+    &.light
+        background-color: $light-nav-background-color
+        border-bottom: 0.15rem solid $light-border-bottom
+    &.dark
+        background-color: $dark-nav-background-color
+        border-bottom: 0.15rem solid $dark-border-bottom
+    & ul
+        list-style-type: none
+        display: flex
+        justify-content: space-evenly
+    & a
+        text-decoration: none
+        font-size: 1.5rem
+        font-weight: bold
+        position: relative
+        padding: 1em
+        &.light
+            color: $light-nav-bookmark-element-a-color
+        &.dark
+            color: $dark-nav-bookmark-element-a-color
+
+    & #change-mode
+        width: 3rem
+        height: 2rem
+        position: absolute
+        outline-width: 5px
+        cursor: pointer
+        border-radius: 50px
+        left: 95vw
+        top: 2vh
+        &.light
+            background-color: $light-change-mode-background-color
+        &.dark
+            background-color: $dark-change-mode-background-color
+    & #change-mode-dot
+        display: block
+        width: 1.3rem
+        height: 1.3rem
+        margin: 0.1rem 0.1rem
+        position: relative
+        border-radius: 100%
+        transition: background-color 0.3s, transform 0.3s
+        &.light
+            background-color: $light-change-mode-dot-background-color
+            left: 0.1rem
+        &.dark
+            background-color: $dark-change-mode-dot-background-color
+            transform: translateX(1.15rem)
+    #burger
+        background: transparent
+        border: none
+        outline: none
+        cursor: pointer
+        display: none
+        z-index: 1
+    .line
+        width: 4em
+        height: 0.5rem
+        margin: 0.5rem
+        border-radius: 20px
+        transition: 1s ease-in-out
+        position: relative
+        &.light
+            background-color: $light-nav-line-background-color
+        &.dark
+            background-color: $dark-nav-line-background-color
+    @media screen and ( max-width: 1000px)
+        #burger
+            display: block
+            transition: 1s ease-in-in
+        #burger.active
+            position: fixed
+            left: 80vw
+        #burger.active .line:first-child
+            transform: translateY(-300px)
+        #burger.active .line:nth-child(2)
+            transform: rotate(320deg) translateY(10px)
+            top: -3.5rem
+        #burger.active .line:nth-child(3)
+            transform: rotate(-320deg) translateY(-10px)
+            top: -3.5rem
+        ul
+            position: fixed
+            right: 0
+            top: 0vh
+            height: 100%
+            flex-direction: column
+            text-align: center
+            transform: translate(100%)
+            transition: 1s ease-in-out
+            z-index: 1
+            &.light
+                background-color: $light-nav-burger-ul-background-color
+            &.dark
+                background-color: $dark-nav-burger-ul-background-color
+
+        ul.active
+            transform: translate(0%)
+            width: 100%
+        a
+            font-size: 1.5rem
+            letter-spacing: 2px
+            &.light
+                color: $light-nav-burger-a-color
+            &.dark
+                color: $dark-nav-burger-a-color
+    @media screen and ( max-width: 760px)
+        ul
+            width: 100%
+    @media screen and ( max-width: 600px)
+        #change-mode
+            left: 85vw
+    @media screen and ( max-width: 300px )
+        #change-mode
+            left: 80vw
+    @media screen and ( max-height: 500px )
+        #change-mode
+            left: 94vw
+    @media screen and ( max-height: 400px )
+        #change-mode
+            left: 92vw
+
+header
+    &.light
+        background-color: $light-header-background-color
+    &.dark
+        background-color: $dark-header-background-color
+    & #slider
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: space-around
+        width: 100%
+        margin: auto
+        overflow: hidden
+        background-image: url(images/dronka.jpg)
+        animation: slider-animation 1s ease-in-out
+    @keyframes slider-animation
+        0%
+            opacity: 0.8
+        100%
+            opacity: 1
+    & #arrow-1
+        content: url(images/angle-small-left-light.png)
+    & #arrow-2
+        content: url(images/angle-small-right-light.png)
+    & .arrow
+        cursor: pointer
+        width: 8rem
+        height: 8rem
+
+    & .slide-container
+        display: none
+        &.displaySlide
+            display: block
+            animation: slider-animation 1s ease-in-out
+    @keyframes slider-animation
+        0%
+            opacity: 0.8
+        100%
+            opacity: 1
+    & .slide
+        width: 80vw
+        height: 70vh
+        border-radius: 1.5rem
+        aspect-ratio: 9/16
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 2.3rem 0rem 2.3rem 0rem
+        opacity: 0.95
+        &.light
+            background-color: $light-header-slide-background-color
+        &.dark
+            background-color: $dark-header-slide-background-color
+    & #slide-1
+        display: flex
+        padding: 2rem
+        & #slide-1-images
+            & #slide-1-images-aside
+                display: flex
+                flex-wrap: wrap
+                & #slide-1-images-2
+                    width: 28vw
+                & #slide-1-images-3
+                    width: 28vw
+        & #slide-1-article
+            text-align: center
+            color: white
+            padding: 0.5rem
+            font-size: 1.3vw
+            & a
+                color: hsl(240,100%,40%)
+
+    & #slide-2
+        display: flex
+        padding: 0.5rem
+        & #slide-2-images
+            & #slide-2-images-aside
+                display: flex
+                & #slide-2-images-2
+                    width: 16vw
+                & #slide-2-images-3
+                    width: 16vw
+        #slide-2-article
+            text-align: center
+            color: white
+            padding: 0.5rem
+            font-size: 1.4vw
+    & #slide-3
+        display: flex
+        & #slide-3-images
+            & #slide-3-images-1
+                width: 22vw
+                padding-left: 1rem
+        #slide-3-article
+            text-align: center
+            color: white
+            padding: 0.5rem
+            font-size: 1.8vw
+
+    @media screen and ( max-width: 600px)
+        .slide
+            width: 16rem
+            height: 95vh
+            aspect-ratio: 9/16
+        #slide-1
+            flex-wrap: wrap
+            align-content: center
+            & #slide-1-images
+                & #slide-1-images-aside
+                    display: flex
+                    & #slide-1-images-2
+                        min-width: 60vw
+                    & #slide-1-images-3
+                        min-width: 60vw
+            #slide-1-article
+                color: white
+                padding: 0.5rem
+                font-size: 2.8vw
+
+        #slide-2
+            flex-wrap: wrap
+            align-content: center
+            & #slide-2-images
+                & #slide-2-images-aside
+                    float: right
+                    & #slide-2-images-2
+                        min-width: 31vw
+                    & #slide-2-images-3
+                        min-width: 31vw
+            & #slide-2-article h2
+                font-size: 4.6vw
+
+        #slide-3
+            flex-wrap: wrap
+            align-content: center
+            & #slide-3-images
+                & #slide-3-images-1
+                    min-width: 65vw
+                    padding-left: 0rem
+            & #slide-3-article
+                padding: 0.5rem
+                font-size: 3.2vw
+        .arrow
+            width: 4rem
+            height: 6rem
+
+    @media screen and ( min-width: 760px ) and ( max-width: 1100px) and ( min-height: 700px )
+        & .slide
+            width: 70vw
+            height: 85vh
+        & #slide-1
+            flex-wrap: wrap
+            align-content: center
+        & #slide-1-images
+            #slide-1-images-aside
+                display: flex
+                justify-content: center
+                & #slide-1-images-2
+                    min-width: 45vw
+                & #slide-1-images-3
+                    min-width: 45vw
+        #slide-1-article h2
+            padding: 0.5rem
+            font-size: 3vw
+
+        #slide-2
+            flex-wrap: wrap
+            align-content: center
+        & #slide-2-images
+            #slide-2-images-aside
+                float: right
+                & #slide-2-images-2
+                    min-width: 32vw
+                & #slide-2-images-3
+                    min-width: 32vw
+        #slide-2-article h2
+            color: white
+            font-size: 3vw
+
+        #slide-3
+            flex-wrap: wrap
+            align-content: center
+        & #slide-3-images
+            #slide-3-images-1
+                min-width: 50vw
+                padding-top: 1rem
+        & #slide-3-article h2
+            color: white
+            padding: 0.5rem
+            font-size: 3.8vw
+    @media screen and ( min-width:  200px ) and ( max-width: 300px )
+        & .slide
+            width: 60vw
+            height: 85vh
+        #slide-1
+            & #slide-1-images
+                padding-top: 0.5rem
+                & #slide-1-images-aside
+                    display: flex
+                    & #slide-1-images-2
+                        width: 55vw
+                    & #slide-1-images-3
+                        width: 55vw
+            #slide-1-article
+                padding: 0.5rem
+                font-size: 2.5vw
+        #slide-2
+            & #slide-2-images
+                & #slide-2-images-aside
+                    float: right
+                    & #slide-2-images-2
+                        width: 28vw
+                    & #slide-2-images-3
+                        width: 28vw
+            & #slide-2-article h2
+                font-size: 4.4vw
+        #slide-3
+            & #slide-3-images
+                padding-left: 0rem
+                & #slide-3-images-1
+                    max-width: 30vw
+                    padding-left: 0rem
+            & #slide-3-article
+                padding: 0.5rem
+                font-size: 3.5vw
+
+    @media screen and ( min-height:  300px ) and ( max-height: 400px )
+        & .slide
+            width: 66vw
+            height: 95vh
+        #slide-1
+            & #slide-1-images
+                padding-top: 0.5rem
+                & #slide-1-images-aside
+                    display: flex
+                    & #slide-1-images-2
+                        width: 32vw
+                    & #slide-1-images-3
+                        width: 32vw
+            #slide-1-article
+                padding: 0.5rem
+                font-size: 1.3vw
+        #slide-2
+            & #slide-2-images
+                & #slide-2-images-aside
+                    float: right
+                    & #slide-2-images-2
+                        width: 16vw
+                    & #slide-2-images-3
+                        width: 16vw
+            & #slide-2-article h2
+                font-size: 2.1vw
+        #slide-3
+            & #slide-3-images
+                padding-left: 1rem
+                & #slide-3-images-1
+                    max-width: 38vw
+                    padding-left: 0rem
+            & #slide-3-article
+                padding: 0.5rem
+                font-size: 1.9vw
+
+    @media screen and ( min-height: 400px ) and ( max-height: 500px )
+        & .slide
+            width: 75vw
+            height: 95vh
+        #slide-1
+            & #slide-1-images
+                padding-top: 0.5rem
+                & #slide-1-images-aside
+                    display: flex
+                    & #slide-1-images-2
+                        width: 35vw
+                    & #slide-1-images-3
+                        width: 35vw
+            #slide-1-article
+                padding: 0.5rem
+                font-size: 1.3vw
+        #slide-2
+            & #slide-2-images
+                & #slide-2-images-aside
+                    float: right
+                    & #slide-2-images-2
+                        width: 17vw
+                    & #slide-2-images-3
+                        width: 17vw
+            & #slide-2-article h2
+                font-size: 2.1vw
+
+        #slide-3
+            & #slide-3-images
+                padding-left: 1rem
+                & #slide-3-images-1
+                    max-width: 35vw
+                    padding-left: 0rem
+            & #slide-3-article
+                padding: 0.5rem
+                font-size: 1.9vw
+    @media screen and ( min-height: 500px ) and ( max-height: 600px )
+        & .slide
+            width: 70vw
+            height: 95vh
+        #slide-1
+            flex-wrap: wrap
+            align-content: center
+            & #slide-1-images
+                & #slide-1-images-aside
+                    display: flex
+                    & #slide-1-images-2
+                        width: 25vw
+                    & #slide-1-images-3
+                        width: 25vw
+            #slide-1-article
+                padding: 0.5rem
+                font-size: 1.5vw
+        #slide-2
+            flex-wrap: wrap
+            align-content: center
+            & #slide-2-images
+                & #slide-2-images-aside
+                    float: right
+                    & #slide-2-images-2
+                        width: 14vw
+                    & #slide-2-images-3
+                        width: 14vw
+            & #slide-2-article h2
+                font-size: 2.1vw
+        #slide-3
+            flex-wrap: wrap
+            align-content: center
+            & #slide-3-images
+                & #slide-3-images-1
+                    max-width: 20vw
+                    padding-left: 0rem
+            & #slide-3-article
+                padding: 0.5rem
+                font-size: 1.5vw
+
+    @media screen and ( min-height: 900px ) and ( max-height: 1000px )
+        & .slide
+            width: 70vw
+            height: 90vh
+        #slide-1
+            flex-wrap: wrap
+            align-content: center
+            & #slide-1-images
+                & #slide-1-images-aside
+                    display: flex
+                    & #slide-1-images-2
+                        width: 65vw
+                    & #slide-1-images-3
+                        width: 65vw
+            #slide-1-article
+                padding: 0.5rem
+                font-size: 2.9vw
+        #slide-2
+            flex-wrap: wrap
+            align-content: center
+            & #slide-2-images
+                & #slide-2-images-aside
+                    float: right
+                    & #slide-2-images-2
+                        width: 34vw
+                    & #slide-2-images-3
+                        width: 34vw
+            & #slide-2-article h2
+                font-size: 4.1vw
+        #slide-3
+            flex-wrap: wrap
+            align-content: center
+            & #slide-3-images
+                & #slide-3-images-1
+                    min-width: 65vw
+                    padding-left: 0rem
+            & #slide-3-article
+                padding: 0.5rem
+                font-size: 3.8vw
+
+section
+    display: flex
+    text-align: center
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-around
+    flex-direction: column
+    &.light
+        background-color: $light-section-background-color
+        border-bottom: 0.15rem solid $light-border-bottom
+    &.dark
+        background-color: $dark-section-background-color
+        border-bottom: 0.15rem solid $dark-border-bottom
+    & article
+        padding: 3rem 0 3rem 0
+        & h2
+            font-size: 1.8rem
+        &.light
+            color: $light-section-article-color
+        &.dark
+            color: $dark-section-article-color
+    #video-container
+        padding-top: 6rem
+    #video
+        width: 85vw
+        aspect-ratio: 16/9
+    article
+        background-color: hsl(0, 0%, 30%)
+        border-radius: 1.5rem
+        margin: 3rem 0 2rem 0
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        flex-direction: column
+    #heading
+        font-size: 2.4rem
+        padding: rem 0
+    #description h2
+        padding: 1rem 3rem 0 3rem
+        font-size: 1.8rem
+        width: 85vw
+    & #recruitment-link
+        text-decoration: none
+        font-size: 2.5rem
+        font-weight: bold
+        &.light
+            color: $light-section-article-color
+        &.dark
+            color: $dark-section-article-color
+    @media screen and ( max-width:  600px)
+        #description h2
+            font-size: 1.2rem
+            padding: 0.5rem
+
+footer
+    & #footer-container
+        display: flex
+        height: 20vh
+        text-align: center
+        justify-content: space-around
+        align-items: center
+    &.light #footer-container
+        background-color: $light-footer-background-color
+    &.dark #footer-container
+        background-color: $dark-footer-background-color
+    .icon
+        margin-left: auto
+        width: 24vw

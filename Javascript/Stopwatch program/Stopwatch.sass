@@ -1,0 +1,67 @@
+$body-background-color: hsl(0, 0%, 65%)
+$h1-color: hsl(0, 0%, 20%)
+$container-background-color: hsl(0, 0%, 95%)
+$display-color: hsl(0, 0%, 25%)
+$display-text-shadow: hsl(0, 0%, 0%, 0.75)
+$controls-color: white
+$startBtn-background-color: hsl(120, 100%, 50%)
+$startBtn-background-color-hover: hsl(120, 100%, 40%)
+$resetBtn-background-color: hsl(200, 100%, 50%)
+$resetBtn-background-color-hover: hsl(200, 100%, 40%)
+$stopBtn-background-color: hsl(10, 100%, 50%)
+$stopBtn-background-color-hover: hsl(10, 100%, 40%)
+
+body
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $body-background-color
+
+#myh1
+    font-size: 4rem
+    font-family: Arial, Helvetica, sans-serif
+    color: $h1-color
+
+#container
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 30px
+    border: 5px solid
+    border-radius: 50px
+    background-color: $container-background-color
+
+#display
+    font-size: 4rem
+    font-family: monospace
+    font-weight: bold
+    color: $display-color
+    text-shadow: $display-text-shadow
+    margin-bottom: 20px
+
+#controls button
+    font-size: 1.5rem
+    font-weight: bold
+    padding: 10px 20px
+    margin: 5px
+    min-width: 120px
+    border: none
+    border-radius: 10px
+    cursor: pointer
+    color: $controls-color
+    transition: background-color 0.5s ease
+
+#startBtn
+    background-color: $startBtn-background-color
+    &:hover
+        background-color: $startBtn-background-color-hover
+
+#stopBtn
+    background-color: $stopBtn-background-color
+    &:hover
+        background-color: $stopBtn-background-color-hover
+
+#resetBtn
+    background-color: $resetBtn-background-color
+    &:hover
+        background-color: $resetBtn-background-color-hover
